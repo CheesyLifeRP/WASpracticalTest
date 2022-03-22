@@ -19,8 +19,7 @@ from django.urls import include
 from wasapp import views
 
 urlpatterns = [
-    path('', views.course, name='course'),
-    path('wasapp/', include('wasapp.urls')),
+    path('course/', views.course, name='course'),
     path('admin/', admin.site.urls),
 ]
 

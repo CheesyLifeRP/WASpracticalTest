@@ -9,12 +9,14 @@
     </head>
     <body>
         <p>The list of courses provided by the GA program:</p>
-        {% if courses%}
+        {% if courses %}
+            <ul>
             {% for course in courses %}
-                <h1>{ { course.title } }</h1>
-                <h2>{ { course.date } }</h2>
-                <p>{ { course.desc } }</p>
+                <h1>{{ course.title }}</h1>
+                <h2>Starting date: {{ course.date }}</h2>
+                <p>{{ course.desc }}</p>
             {% endfor %}
+            </ul>
         {% else %}
             <strong>There are no programs to be shown.</strong>
         {% endif %}
